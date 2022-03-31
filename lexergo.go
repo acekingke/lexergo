@@ -49,7 +49,7 @@ func Concat_fn(args ...Bool_string_string_fn) Bool_string_string_fn {
 		readStr := ""
 		for _, fn := range args {
 			if rest == "" {
-				return false, "", ""
+				return false, "", in
 			} else {
 				matched, s, rest = fn(rest)
 				if matched {
@@ -98,7 +98,7 @@ func Repeat_fn(arg Bool_string_string_fn,
 		readStr := ""
 		for {
 			if rest == "" {
-				return false, "", ""
+				return false, "", in
 			} else {
 				matched, s, rest = arg(rest)
 				if matched {
